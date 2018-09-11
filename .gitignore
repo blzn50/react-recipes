@@ -3,3 +3,6 @@
 
 # output files
 /dist
+
+# environment variable
+.env
