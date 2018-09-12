@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -33,6 +34,7 @@ const RecipeDetail = (props) => {
           ))}
         </ol>
       </div>
+      <Link to={`/recipe/${props.recipe.id}`}>See More</Link>
     </div>
   );
 };
