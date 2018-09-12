@@ -26,4 +26,9 @@ RecipeList.propTypes = {
   favorites: PropTypes.array,
 };
 
+RecipeList.defaultProps = {
+  recipes: [],
+  favorites: [],
+};
+
 export default RecipeList;

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecipeList /> should not break when no recipe passed 1`] = `
+<div>
+  <ul
+    className="list-reset"
+  />
+</div>
+`;
+
+exports[`<RecipeList /> should render correctly 1`] = `
+<div>
+  <ul
+    className="list-reset"
+  >
+    <li
+      className="py2 border-bottom border-bottom-dashed pointer"
+      onClick={[Function]}
+    >
+      <span
+        className="mr1"
+        onClick={[Function]}
+      >
+        🔲
+      </span>
+      <span>
+        Recipe 1
+      </span>
+      <span>
+        Category 1
+      </span>
+    </li>
+    <li
+      className="py2 border-bottom border-bottom-dashed pointer"
+      onClick={[Function]}
+    >
+      <span
+        className="mr1"
+        onClick={[Function]}
+      >
+        🔲
+      </span>
+      <span>
+        Recipe 2
+      </span>
+      <span>
+        Category 2
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<RecipeList /> should render favorited state correctly 1`] = `
+<div>
+  <ul
+    className="list-reset"
+  >
+    <li
+      className="py2 border-bottom border-bottom-dashed pointer"
+      onClick={[Function]}
+    >
+      <span
+        className="mr1"
+        onClick={[Function]}
+      >
+        ✅
+      </span>
+      <span>
+        Recipe 1
+      </span>
+      <span>
+        Category 1
+      </span>
+    </li>
+    <li
+      className="py2 border-bottom border-bottom-dashed pointer"
+      onClick={[Function]}
+    >
+      <span
+        className="mr1"
+        onClick={[Function]}
+      >
+        🔲
+      </span>
+      <span>
+        Recipe 2
+      </span>
+      <span>
+        Category 2
+      </span>
+    </li>
+  </ul>
+</div>
+`;
