@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const RecipeDetail = props => {
+const RecipeDetail = (props) => {
   if (!props.recipe) {
     return (
       <div
@@ -13,12 +14,9 @@ const RecipeDetail = props => {
     );
   }
   return (
-    <div
-      style={props.style}
-      className={classNames('bg-white p2', props.className)}
-    >
+    <div style={props.style} className={classNames('bg-white p2', props.className)}>
       <h2 className="h2">{props.recipe.name}</h2>
-      <img className="fit" src={props.recipe.image} />
+      <img className="fit" src={props.recipe.image} alt={props.recipe.name} />
       <div>
         <span>{props.recipe.category}</span>
         <span>{props.recipe.calories}</span>
@@ -37,6 +35,12 @@ const RecipeDetail = props => {
       </div>
     </div>
   );
+};
+
+RecipeDetail.propTypes = {
+  style: PropTypes.object,
+  className: PropTypes.string,
+  recipe: PropTypes.object,
 };
 
 export default RecipeDetail;

@@ -8,16 +8,17 @@ class App extends React.Component {
     super(props);
     this.state = {
       recipes: [],
-      currentRecipe: null
+      currentRecipe: null,
     };
     this.onRecipeClick = this.onRecipeClick.bind(this);
   }
+
   componentDidMount() {
-    fetch(rcpURL + '/v1/recipes')
+    fetch(`${rcpURL}/v1/recipes`)
       .then(res => res.json())
-      .then(json => {
+      .then((json) => {
         this.setState({
-          recipes: json
+          recipes: json,
         });
       });
   }
@@ -25,12 +26,11 @@ class App extends React.Component {
   onRecipeClick(id) {
     fetch(`${rcpURL}/v1/recipes/${id}`)
       .then(res => res.json())
-      .then(recipe => {
+      .then((recipe) => {
         this.setState({
-          currentRecipe: recipe
+          currentRecipe: recipe,
         });
       });
-    console.log(this.state.currentRecipe);
   }
 
   render() {
@@ -39,16 +39,8 @@ class App extends React.Component {
       <div>
         <Header />
         <main className="px4 flex">
-          <RecipeList
-            recipes={recipes}
-            onHandleClick={this.onRecipeClick}
-            style={{ flex: 3 }}
-          />
-          <RecipeDetail
-            className="ml4"
-            recipe={currentRecipe}
-            style={{ flex: 5 }}
-          />
+          <RecipeList recipes={recipes} onHandleClick={this.onRecipeClick} style={{ flex: 3 }} />
+          <RecipeDetail className="ml4" recipe={currentRecipe} style={{ flex: 5 }} />
         </main>
       </div>
     );

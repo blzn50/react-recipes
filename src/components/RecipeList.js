@@ -1,5 +1,5 @@
 import React from 'react';
-const rcpURL = 'https://reactrecipes.herokuapp.com/v1/recipes';
+import PropTypes from 'prop-types';
 
 const RecipeList = props => (
   <div style={props.style}>
@@ -18,5 +18,11 @@ const RecipeList = props => (
     </ul>
   </div>
 );
+
+RecipeList.propTypes = {
+  style: PropTypes.object,
+  recipes: PropTypes.object,
+  onHandleClick: PropTypes.func,
+};
 
 export default RecipeList;
